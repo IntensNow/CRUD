@@ -1,0 +1,18 @@
+{
+  "name": "fullstack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "install:client": "cd client && yarn install",
+    "install:server": "cd server && yarn install",
+    "postinstall": "concurrently \"cd client && yarn install\" \"cd server && yarn install\" ",
+    "server": "cd server && yarn server",
+    "client": "cd client && yarn start",
+    "dev": "concurrently \"yarn server\" \"yarn client\" ",
+    "test:server": "cd server && yarn test", 
+    "test:client": "cd client && yarn test",
+    "test": "concurrently \"yarn test:server\" \"yarn test:client\" "
+  },
+  "author": "Daniil K",
+  "license": "MIT"
+}
